@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Web Project - 202604201831</title>
+    
+    <!-- Reset CSS (Optional but recommended) -->
+    <link href="https://www.cjc116.com/css/reset.css" rel="stylesheet">
+    
+    <!-- Your CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aurora Hub｜價目表網站</title>
+
+  <!-- Google Fonts -->
+  <link href="[fonts.googleapis.com](https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Noto+Serif+TC:wght@400;600&display=swap)" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Noto Serif TC', serif;
+      background-color: #f5f0eb;
+      color: #4a3c35;
+      line-height: 1.7;
+      padding-bottom: 120px;
+    }
+    header {
+      background-color: #e7d7c9;
+      text-align: center;
+      padding: 1.5rem;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      color: #3e312b;
+      letter-spacing: 1px;
+    }
+    .tabs {
+      position: sticky;
+      top: 0;
+      background-color: #ede5dc;
+      display: flex;
+      justify-content: space-around;
+      border-bottom: 2px solid #d4c1b3;
+      z-index: 10;
+    }
+    .tab-button {
+      flex: 1;
+      padding: 0.9rem;
+      cursor: pointer;
+      font-weight: 600;
+      text-align: center;
+      border: none;
+      background: none;
+      color: #5b4636;
+      transition: 0.2s;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+    }
+    .tab-button.active {
+      background-color: #d9c5b6;
+      border-bottom: 3px solid #b19983;
+      color: #2f241f;
+    }
+    .tab-content {
+      display: none;
+      padding: 1.8rem;
+      background-color: #fffaf7;
+      margin: 1rem;
+      border-radius: 12px;
+      border: 1px solid #e0d6cd;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .tab-content.active {
+      display: block;
+    }
+    h2 {
+      font-family: 'Cormorant Garamond', serif;
+      text-align: center;
+      color: #3b2e25;
+      margin-bottom: 1rem;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      margin-bottom: 0.6rem;
+    }
+    .category {
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin-top: 1rem;
+      color: #4d3d33;
+    }
+    @media (max-width: 768px) {
+      header { font-size: 1.7rem; }
+      .tab-button { font-size: 0.95rem; padding: 0.7rem; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>Aurora Hub</header>
+
+  <div class="tabs">
+    <button class="tab-button active" onclick="openTab(event, 'promo')">當月優惠活動</button>
+    <button class="tab-button" onclick="openTab(event, 'price')">價目表</button>
+    <button class="tab-button" onclick="openTab(event, 'policy')">預約須知</button>
+  </div>
+
+  <!-- 分頁一：當月優惠 -->
+  <div id="promo" class="tab-content active">
+    <h2>🎁 五月限定活動：【寵愛媽咪(自己)・療癒盛典】</h2>
+    <p>活動期間：即日起 - 2026/05/31</p>
+
+    <div class="category">初夏滑溜專區（除毛限定組合）</div>
+    <ul>
+      <li>【清爽必備】VIO 私密處全除 + 腋下：$1,499（原價 $1,599）</li>
+      <li>【夏日美腿】全腿 + 腋下：$1,699（原價 $1,799）</li>
+      <li>【絲滑女神】全手臂 + 全腿：$1,999（原價 $2,299）</li>
+    </ul>
+
+    <div class="category">睫毛／耳燭活動</div>
+    <ul>
+      <li>單人預約：享 9 折 優惠。</li>
+      <li>兩人同行：享 85 折 優惠（可預約不同項目，只要同時預約成功即可享折扣）。</li>
+    </ul>
+  </div>
+
+  <!-- 分頁二：價目表 -->
+  <div id="price" class="tab-content">
+    <h2>Aurora Hub｜價目表 (2026 最新版)</h2>
+
+    <div class="category">🍯 RICA 熱蠟除毛</div>
+    <ul>
+      <li>私密處全除（VIO）：$1,199</li>
+      <li>腋下：$400</li>
+      <li>前手臂（手肘以下）：$450</li>
+      <li>全手臂：$900</li>
+      <li>小腿：$900</li>
+      <li>全腿：$1,399</li>
+    </ul>
+
+    <div class="category">🕯️ NUNU 睫毛管理 & 耳燭療癒</div>
+    <ul>
+      <li>水光睫（似角蛋白）：$1,200</li>
+      <li>眉毛雕塑（野生眉）：$1,400</li>
+      <li>耳燭舒壓 SPA：$1,000</li>
+    </ul>
+  </div>
+
+  <!-- 分頁三：預約須知 -->
+  <div id="policy" class="tab-content">
+    <h2>基本預約規範</h2>
+    <ul>
+      <li>女性專屬：本工作室為女性專屬空間，不得攜伴。</li>
+      <li>準時預約：遲到超過 15 分鐘將自動取消預約。</li>
+      <li>變更取消：需改期或取消請於前三天告知；若臨時取消，須補貼損失費用並於下次預約時支付訂金 500 元。</li>
+      <li>溝通無礙：有任何不適或疑慮，歡迎隨時提問與溝通。</li>
+    </ul>
+
+    <div class="category">🍯 熱蠟除毛・須知</div>
+    <ul>
+      <li>毛髮長度：請勿自行修剪，需有 1 公分以上。</li>
+      <li>皮膚狀況：施作部位須無傷口、發炎或感染。</li>
+      <li>特殊時期：生理期可塞棉條施作，孕婦暫不接。</li>
+      <li>產品暫停：施作前 7 天請暫停酸類保養或藥品。</li>
+      <li>行程安排：若有泡湯、游泳或海邊行程，建議提前 3–5 天施作。</li>
+      <li>穿著建議：建議穿著寬鬆透氣衣物。</li>
+    </ul>
+
+    <div class="category">👁 睫毛管理／野生眉・須知</div>
+    <ul>
+      <li>眼周素顏：當天請勿帶眼妝，可上底妝。</li>
+      <li>暫停保養：施作前勿在睫毛或眉毛塗抹保養品。</li>
+      <li>術後照顧：操作後 4 小時內請避免碰水洗臉。</li>
+      <li>眉毛長度：施作前 1–2 天勿修剪。</li>
+      <li>醫療評估：如有紋繡或眼睛雷射，須待完全復原再預約。</li>
+      <li>售後服務：若想調整弧度，可於 3 日內回店操作。</li>
+      <li>野生眉須知：前一週勿自行修剪眉長。</li>
+    </ul>
+
+    <div class="category">👂 耳燭舒壓・須知</div>
+    <ul>
+      <li>健康確認：若耳朵發炎、有分泌物、耳膜破損或生理期，暫不建議施作。</li>
+      <li>放鬆體驗：過程請保持放鬆，對溫度敏感者可隨時告知。</li>
+    </ul>
+  </div>
+
+  <script>
+    function openTab(evt, tabName) {
+      const contents = document.querySelectorAll('.tab-content');
+      const buttons = document.querySelectorAll('.tab-button');
+      contents.forEach(c => c.classList.remove('active'));
+      buttons.forEach(b => b.classList.remove('active'));
+      document.getElementById(tabName).classList.add('active');
+      evt.currentTarget.classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
+    
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    
+    <!-- External JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
